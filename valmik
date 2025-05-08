@@ -1,0 +1,33 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
+
+# Sample data for the portfolio profile
+data = {
+    'Category': ['Education', 'Experience', 'Skills', 'Projects'],
+    'Details': [
+        'B.Sc. in Computer Science from XYZ University',
+        '3 years as a Software Developer at ABC Corp',
+        'Python, Java, SQL, Machine Learning, Data Analysis',
+        'Project A: Machine Learning Model, Project B: Web Application'
+    ]
+}
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Display the portfolio profile
+df
+
+# Plotting a simple bar chart for visual representation
+categories = ['Education', 'Experience', 'Skills', 'Projects']
+values = [1, 3, 5, 2]  # Arbitrary values for visualization
+
+plt.figure(figsize=(10, 6))
+sns.barplot(x=categories, y=values, palette='viridis')
+plt.title('Portfolio Profile of Valmik P Harde')
+plt.xlabel('Category')
+plt.ylabel('Importance')
+plt.show()
+
